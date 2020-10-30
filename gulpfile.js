@@ -86,7 +86,8 @@ gulp.task('clean', function() {
 gulp.task('sass', function () {
   return gulp.src('src/scss/theme.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dev/css'));
+    .pipe(gulp.dest('dev/css'))
+    .pipe(browserSync.stream());
 });
 
 // Static Server + watching scss/html files
@@ -95,8 +96,9 @@ gulp.task('browser-sync', gulp.series('sass', function(){
     browserSync.init({
         server: "./dev"
     });
-    gulp.watch("dev/*.*").on('change', browserSync.reload);
-        gulp.watch("dev/**/*.*").on('change', browserSync.reload);
+    gulp.watch("./dev/*.html").on('change', browserSync.reload);
+    gulp.watch("./dev/css/*.css").on('change', browserSync.reload);
+    gulp.watch("*.html").on("change", reload);
 }));
 
 // Inject non-minified css link into HTML - for dev

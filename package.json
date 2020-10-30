@@ -8,7 +8,7 @@
   "scripts": {
     "build": "npm run clean && npm run clean-prod  && npx eleventy && gulp sass && gulp minify-css && gulp dist-assets && gulp prod-copy && gulp inject-min-css && gulp purgecss",
     "prod": "npm run clean-prod && gulp sass && npx eleventy && gulp purgecss && gulp minify-css && gulp dist-assets && gulp inject-min-css",
-    "build-dev": "gulp sass && npx eleventy && gulp dist-assets && gulp inject-css",
+    "build-dev": "gulp sass && gulp dist-assets && npx eleventy && gulp inject-css",
     "sync": "gulp browser-sync",
     "watch-dev": "npm run build-dev && npm run sync",
     "postinstall": "gulp copy-assets",
