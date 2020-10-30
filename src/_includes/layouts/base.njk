@@ -1,0 +1,40 @@
+<!doctype html>
+<html class="h-100" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="John Doe">
+  <meta name="generator" content="Eleventy">
+  <title>{{ title or metadata.title }}</title>
+  <!-- inject:css -->
+  <!-- endinject -->
+</head>
+
+<body class="d-flex h-100">
+
+  <div class="container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+      <div>
+        <div class="float-md-left mb-0 mt-2"><img src="img/logo.svg" width="80"/></div>
+        <!--<nav class="nav nav-masthead justify-content-center float-md-right">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Contact</a>
+        </nav>-->
+      </div>
+    </header>
+
+    <main class="px-3">
+        {{ content | safe }}
+    </main>
+
+    <footer class="mt-auto text-white-50">
+      <p>You can find me at <a href="https://github.com/holger1411" target="_blank" class="text-white">GitHub</a>, <a href="https://www.linkedin.com/in/holger-k%C3%B6nemann-29707317/" target="_blank" class="text-white">LinkedIn</a> or <a href="https://www.xing.com/profile/Holger_Koenemann/cv" target="_blank" class="text-white">Xing</a>  (german language).</p>
+    </footer>
+  </div>
+
+</body>
+
+</html>

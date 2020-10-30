@@ -1,0 +1,19 @@
+@import "themes/base/variables-theme"; //Thats your main variable file to set up all the basic design stuff like contrast or accent color, global paddings, font families and more
+
+@import "assets/bootstrap"; // Bootstrap default styles
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
+.squared {
+  position:relative;
+  padding:20px 0 20px 50px;
+}
+.squared::before {
+  content:'';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    z-index: -1;
+background-color:$primary;
+margin:-20px 0 -20px -50px;
+}
+//@import url('https://rsms.me/inter/inter-ui.css'); //adds Inter UI font from external source

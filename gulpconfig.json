@@ -1,0 +1,10 @@
+
+{
+	"paths": {
+		"sass": "./sass",
+		"node": "./node_modules",
+    "dev": "./src",
+    "dist": "./ev",
+        "assets": "./assets"
+	}
+}

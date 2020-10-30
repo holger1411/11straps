@@ -1,0 +1,56 @@
+{
+  "name": "11strap",
+  "version": "0.0.1",
+  "description": "simple 11ty and Bootstrap5 boilerplate",
+  "license": "MIT",
+  "private": "true",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run clean && npm run clean-prod  && npx eleventy && gulp sass && gulp minify-css && gulp dist-assets && gulp prod-copy && gulp inject-min-css && gulp purgecss",
+    "prod": "npm run clean-prod && gulp sass && npx eleventy && gulp purgecss && gulp minify-css && gulp dist-assets && gulp inject-min-css",
+    "build-dev": "gulp sass && npx eleventy && gulp dist-assets && gulp inject-css",
+    "sync": "gulp browser-sync",
+    "watch-dev": "npm run build-dev && npm run sync",
+    "postinstall": "gulp copy-assets",
+    "scss": "node-sass --output-style compressed -o dev/css/ src/scss/theme.scss",
+    "watch:all": "onchange 'src/' -- npm run build-dev",
+    "serve": "eleventy --serve",
+    "watch": "run-p sync watch:all",
+    "clean": "rm -rf dev/*",
+    "clean-prod": "rm -rf prod/*"
+  },
+  "dependencies": {
+    "@11ty/eleventy": "0.11.0",
+    "bootstrap": "5.0.0-alpha2",
+    "clean-css": "^4.2.3",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "4.1.0",
+    "npm-watch": "^0.7.0",
+    "sass": "^1.27.0",
+    "watch": "^1.0.2"
+  },
+  "author": "Holger Koenemann",
+  "devDependencies": {
+    "gulp-inject": "^5.0.5",
+    "gulp-purgecss": "^2.3.0",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^7.0.2",
+    "react-is": "^17.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "bugs": {
+    "url": ""
+  },
+  "homepage": ""
+}
