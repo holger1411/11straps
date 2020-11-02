@@ -43,7 +43,7 @@ body {
   font-weight: 300;
   line-height: 1.5;
   color: #888;
-  background-color: #999;
+  background-color: #151515;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
 
@@ -202,7 +202,7 @@ kbd {
   padding: 0.2rem 0.4rem;
   font-size: 0.875em;
   color: #fff;
-  background-color: #999;
+  background-color: #151515;
   border-radius: 0.2rem; }
   kbd kbd {
     padding: 0;
@@ -449,7 +449,7 @@ progress {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #999;
+  background-color: #151515;
   border: 1px solid #888;
   border-radius: 0.25rem;
   max-width: 100%;
@@ -1625,7 +1625,7 @@ progress {
   height: 1em;
   margin-top: 0.25em;
   vertical-align: top;
-  background-color: #999;
+  background-color: #151515;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1770,11 +1770,11 @@ progress {
   .form-range:focus {
     outline: none; }
     .form-range:focus::-webkit-slider-thumb {
-      box-shadow: 0 0 0 1px #999, 0 0 0 0.25rem rgba(255, 193, 7, 0.25); }
+      box-shadow: 0 0 0 1px #151515, 0 0 0 0.25rem rgba(255, 193, 7, 0.25); }
     .form-range:focus::-moz-range-thumb {
-      box-shadow: 0 0 0 1px #999, 0 0 0 0.25rem rgba(255, 193, 7, 0.25); }
+      box-shadow: 0 0 0 1px #151515, 0 0 0 0.25rem rgba(255, 193, 7, 0.25); }
     .form-range:focus::-ms-thumb {
-      box-shadow: 0 0 0 1px #999, 0 0 0 0.25rem rgba(255, 193, 7, 0.25); }
+      box-shadow: 0 0 0 1px #151515, 0 0 0 0.25rem rgba(255, 193, 7, 0.25); }
   .form-range::-moz-focus-outer {
     border: 0; }
   .form-range::-webkit-slider-thumb {
@@ -2727,14 +2727,14 @@ progress {
   padding: 0.25rem 1rem;
   clear: both;
   font-weight: 300;
-  color: #999;
+  color: #151515;
   text-align: inherit;
   text-decoration: none;
   white-space: nowrap;
   background-color: transparent;
   border: 0; }
   .dropdown-item:hover, .dropdown-item:focus {
-    color: #8c8c8c;
+    color: #080808;
     background-color: #f8f9fa; }
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
@@ -2759,7 +2759,7 @@ progress {
 .dropdown-item-text {
   display: block;
   padding: 0.25rem 1rem;
-  color: #999; }
+  color: #151515; }
 
 .dropdown-menu-dark {
   color: #888;
@@ -2900,8 +2900,8 @@ progress {
   .nav-tabs .nav-link.active,
   .nav-tabs .nav-item.show .nav-link {
     color: #495057;
-    background-color: #999;
-    border-color: #888 #888 #999; }
+    background-color: #151515;
+    border-color: #888 #888 #151515; }
   .nav-tabs .dropdown-menu {
     margin-top: -1px;
     border-top-left-radius: 0;
@@ -5422,7 +5422,7 @@ progress {
   background-color: #343a40 !important; }
 
 .bg-body {
-  background-color: #999 !important; }
+  background-color: #151515 !important; }
 
 .bg-white {
   background-color: #fff !important; }
