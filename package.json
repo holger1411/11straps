@@ -31,7 +31,6 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "4.1.0",
-    "inter-ui": "^3.15.0",
     "npm-watch": "^0.7.0",
     "sass": "^1.27.0",
     "watch": "^1.0.2"
