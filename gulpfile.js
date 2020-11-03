@@ -82,28 +82,28 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
+
+
+gulp.task('browser-sync', function(done) {
+    browserSync.init({
+        server: {
+            baseDir: "./dev"
+        }
+    });
+gulp.watch("dev/**/*.*").on('change', browserSync.reload);
+});
+
 // Compile sass to css
 gulp.task('sass', function () {
   return gulp.src('src/scss/theme.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dev/css'))
-    .pipe(browserSync.stream());
+        .pipe(browserSync.stream());
 });
-
-// Static Server + watching scss/html files
-gulp.task('browser-sync', gulp.series('sass', function(){
-
-    browserSync.init({
-        server: "./dev"
-    });
-    gulp.watch("./dev/*.html").on('change', browserSync.reload);
-    gulp.watch("./dev/css/*.css").on('change', browserSync.reload);
-    gulp.watch("*.html").on("change", reload);
-}));
 
 // Inject non-minified css link into HTML - for dev
 gulp.task('inject-css', function (done) {
-  gulp.src('./dev/index.html')
+  gulp.src('./dev/*.html')
     .pipe(inject(gulp.src('./dev/css/theme.css', {read: false}), {relative: true}))
     .pipe(gulp.dest('./dev'));
      done();
@@ -116,9 +116,6 @@ gulp.task('inject-min-css', function (done) {
     .pipe(gulp.dest('./prod'));
      done();
 });
-
-
-
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
 gulp.task( 'copy-assets', function( done ) {
