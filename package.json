@@ -7,7 +7,7 @@
   "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run clean-prod  && npx eleventy && gulp sass && gulp minify-css && gulp dist-assets && gulp prod-copy && gulp inject-min-css && gulp purgecss && gulp minify-html",
-    "build-dev": "npm run clean && gulp sass && gulp dist-assets && npm run 11ty",
+    "build-dev": "eleventy && gulp dist-assets && gulp sass",
     "11ty": "eleventy && gulp inject-css",
     "sync": "gulp browser-sync",
     "watch-dev": "npm run build-dev && npm run sync",
@@ -15,7 +15,7 @@
     "scss": "node-sass --output-style compressed -o dev/css/ src/scss/theme.scss",
     "watch:all": "onchange 'src/' -- npm run build-dev",
     "serve": "eleventy --serve",
-    "watch": "run-p sync watch:all",
+    "watch": "npm run clean && npm run build-dev && run-p sync watch:all",
     "clean": "rm -rf dev/*",
     "clean-prod": "rm -rf public/*"
   },
@@ -37,6 +37,7 @@
   },
   "author": "Holger Koenemann",
   "devDependencies": {
+    "gulp-html-replace": "^1.6.2",
     "gulp-inject": "^5.0.5",
     "gulp-inject-in-html": "^1.2.0",
     "gulp-purgecss": "^2.3.0",

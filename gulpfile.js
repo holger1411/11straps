@@ -8,6 +8,7 @@ var rename = require('gulp-rename');
 const purgecss = require('gulp-purgecss');
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+var htmlreplace = require('gulp-html-replace');
 var reload      = browserSync.reload;
 var inject = require('gulp-inject');
 // Configuration file to keep your code DRY
@@ -82,8 +83,6 @@ gulp.task('clean', function() {
     .pipe(clean());
 });
 
-
-
 gulp.task('browser-sync', function(done) {
     browserSync.init({
         server: {
@@ -98,7 +97,6 @@ gulp.task('sass', function () {
   return gulp.src('src/scss/theme.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dev/css'))
-        .pipe(browserSync.stream());
 });
 
 // Inject non-minified css link into HTML - for dev
@@ -110,11 +108,20 @@ gulp.task('inject-css', function (done) {
 });
 
 // Inject minified css link into HTML - for public
-gulp.task('inject-min-css', function (done) {
+gulp.task('inject-min-cssx', function (done) {
   gulp.src('./public/**/*.html')
     .pipe(inject(gulp.src('./public/css/theme.min.css', {read: false}), {relative: true}))
     .pipe(gulp.dest('./public'));
      done();
+});
+
+gulp.task('inject-min-css', function(done) {
+  gulp.src('./public/**/*.html')
+    .pipe(htmlreplace({
+        'css': 'css/theme.min.css'
+    }))
+    .pipe(gulp.dest('./public'));
+         done();
 });
 
 ////////////////// All Bootstrap SASS  Assets /////////////////////////
@@ -129,11 +136,6 @@ gulp.task( 'copy-assets', function( done ) {
 	gulp
 		.src( paths.node + '/bootstrap/scss/**/*.scss' )
 		.pipe( gulp.dest( paths.dev + '/scss/assets/bootstrap' ) );
-
-    // Copy inter UI
-  	gulp
-  		.src( paths.node + '/inter-ui/scss/**/*.scss' )
-  		.pipe( gulp.dest( paths.dev + '/scss/assets/bootstrap' ) );
 
 	////////////////// End Bootstrap 4 Assets /////////////////////////
 
