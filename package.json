@@ -17,7 +17,7 @@
     "serve": "eleventy --serve",
     "watch": "run-p sync watch:all",
     "clean": "rm -rf dev/*",
-    "clean-prod": "rm -rf prod/*"
+    "clean-prod": "rm -rf public/*"
   },
   "dependencies": {
     "@11ty/eleventy": "0.11.0",

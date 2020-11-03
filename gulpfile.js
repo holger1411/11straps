@@ -26,7 +26,7 @@ gulp.task('dist-assets', function (done) {
 
 gulp.task('prod-copy', function (done) {
     gulp.src('./dev/**/**.*')
-    .pipe(gulp.dest('./prod/'));
+    .pipe(gulp.dest('./public/'));
     done();
 });
 
@@ -43,19 +43,19 @@ gulp.task('minify-css', () => {
 
 // minifies HTML
 gulp.task('minify-html', () => {
-  return gulp.src('prod/*.html')
+  return gulp.src('public/*.html')
     .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
-    .pipe(gulp.dest('prod'));
+    .pipe(gulp.dest('public'));
 });
 
 
 // Purging unused CSS
 gulp.task('purgecss', () => {
-    return gulp.src('prod/css/theme.min.css')
+    return gulp.src('public/css/theme.min.css')
         .pipe(purgecss({
-            content: ['prod/**/*.html']
+            content: ['public/**/*.html']
         }))
-        .pipe(gulp.dest('prod/css'))
+        .pipe(gulp.dest('public/css'))
 })
 
 gulp.task('clean-dist', function() {
@@ -109,11 +109,11 @@ gulp.task('inject-css', function (done) {
      done();
 });
 
-// Inject minified css link into HTML - for prod
+// Inject minified css link into HTML - for public
 gulp.task('inject-min-css', function (done) {
-  gulp.src('./prod/**/*.html')
-    .pipe(inject(gulp.src('./prod/css/theme.min.css', {read: false}), {relative: true}))
-    .pipe(gulp.dest('./prod'));
+  gulp.src('./public/**/*.html')
+    .pipe(inject(gulp.src('./public/css/theme.min.css', {read: false}), {relative: true}))
+    .pipe(gulp.dest('./public'));
      done();
 });
 
@@ -129,6 +129,11 @@ gulp.task( 'copy-assets', function( done ) {
 	gulp
 		.src( paths.node + '/bootstrap/scss/**/*.scss' )
 		.pipe( gulp.dest( paths.dev + '/scss/assets/bootstrap' ) );
+
+    // Copy inter UI
+  	gulp
+  		.src( paths.node + '/inter-ui/scss/**/*.scss' )
+  		.pipe( gulp.dest( paths.dev + '/scss/assets/bootstrap' ) );
 
 	////////////////// End Bootstrap 4 Assets /////////////////////////
 
