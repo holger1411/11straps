@@ -23,4 +23,4 @@ To run the build task automatically on file changes run:
 ```
 npm run watch
 ```
-That will run 11ty in dev mode. Means it will build a non-minified version within the `/dev` folder, start a local server from this folder and connects browser sync to it.
+That will run 11straps in dev mode. Means it will build a non-minified version within the `/dev` folder, start a local server from this folder and connects browser sync to it.
