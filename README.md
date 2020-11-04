@@ -17,7 +17,10 @@ To build your static website from the `/src`folder run:
 ```
 npm run build
 ```
+That will output the full site, with purged and minified CSS and minified html. The output will be stored in the /public folder
+
 To run the build task automatically on file changes run:
 ```
 npm run watch
 ```
+That will run 11ty in dev mode. Means it will build a non-minified version within the /dev folder, start a server from this folder and connects browser sync to it.
