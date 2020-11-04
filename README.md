@@ -1,8 +1,8 @@
-# 11strap = 11ty + Bootstrap5
+# 11straps = 11ty + Bootstrap5
 
-**Demo**: <a href="https://11winds.io" target="_blank">11strap.io</a>
+**Demo**: <a href="https://11straps.com" target="_blank">11straps.com</a>
 
-11winds is a simple boilerplate. It combines the static site generator <a href="https://www.11ty.dev/" target="_blank">11ty</a> with the CSS framework <a href="https://tailwindcss.com/" target="_blank">TailwindCSS</a>. It minifies and purges the CSS file (so it boiles down the TailwindCSS file to a few kb, based on your usage) and comes with a static server and browser sync support for your local development.
+11straps is a simple boilerplate. It combines the static site generator <a href="https://www.11ty.dev/" target="_blank">11ty</a> with the CSS framework <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a>. It minifies and purges the CSS file (so it boiles down the TailwindCSS file to a few kb, based on your usage) and comes with a static server and browser sync support for your local development.
 
 ## Installation
 Download or checkout the master branch of this repo.
