@@ -10,7 +10,6 @@ const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 var htmlreplace = require('gulp-html-replace');
 var reload      = browserSync.reload;
-var inject = require('gulp-inject');
 // Configuration file to keep your code DRY
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
@@ -97,22 +96,6 @@ gulp.task('sass', function () {
   return gulp.src('src/scss/theme.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dev/css'))
-});
-
-// Inject non-minified css link into HTML - for dev
-gulp.task('inject-css', function (done) {
-  gulp.src('./dev/*.html')
-    .pipe(inject(gulp.src('./dev/css/theme.css', {read: false}), {relative: true}))
-    .pipe(gulp.dest('./dev'));
-     done();
-});
-
-// Inject minified css link into HTML - for public
-gulp.task('inject-min-cssx', function (done) {
-  gulp.src('./public/**/*.html')
-    .pipe(inject(gulp.src('./public/css/theme.min.css', {read: false}), {relative: true}))
-    .pipe(gulp.dest('./public'));
-     done();
 });
 
 gulp.task('inject-min-css', function(done) {
