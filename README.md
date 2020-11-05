@@ -12,13 +12,6 @@ npm install
 ```
 Now you are good to go.
 
-## Build it for prod
-To build your static website for a prod deployment run:
-```
-npm run build
-```
-That will output the full site, with purged and minified CSS and minified html. The output will be stored in the `/public` folder
-
 ## Build it for dev
 To build your static website for local development run:
 ```
@@ -32,3 +25,10 @@ To run the build-dev task automatically on file changes run:
 npm run watch
 ```
 That will run a local server from `/dev` folder and connects browser sync to it. On changes within the `/src` folder it will run the `npm run build-dev` command automatically and will reload your browser
+
+## Build it for prod
+If you are done with your dev work and happy with it its time to deploy your static website into the wild wild west (www). To build your static website for a prod deployment run:
+```
+npm run build
+```
+That will output the full site, with purged and minified CSS and minified html. The output will be stored in the `/public` folder. 
