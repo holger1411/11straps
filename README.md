@@ -12,7 +12,7 @@ node --version
 ```
 
 ## Installation
-Download or checkout the master branch of this repo.
+Download and extract the [latest release](https://github.com/holger1411/11straps/releases) or checkout the master branch of this repo.
 Fire up your terminal, go to the new folder and run:
 ```
 npm install
