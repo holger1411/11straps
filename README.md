@@ -3,7 +3,7 @@
 **Demo**: <a href="https://11straps.com" target="_blank">11straps.com</a>
 
 ## What is 11straps?
-11straps is a simple boilerplate. It combines the static site generator <a href="https://www.11ty.dev/" target="_blank">11ty</a> with the CSS framework <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a>. It minifies and purges the CSS file (so it removes any unused CSS) and comes with a static server and browser sync support for your local development.
+11straps is a simple boilerplate. It combines the static site generator <a href="https://www.11ty.dev/" target="_blank">11ty</a> with the CSS framework <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> and is stitched together with some npm and Gulp magic dust. It minifies and purges the CSS file (so it removes any unused CSS) and comes with a static server and browser sync support for your local development.
 
 ## Requirements
 You need Node (at least v8+) on your computer. To check if you have node and what version run this command in your terminal:
