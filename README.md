@@ -12,15 +12,23 @@ npm install
 ```
 Now you are good to go.
 
-## Build it
-To build your static website from the `/src`folder run:
+## Build it for prod
+To build your static website for a prod deployment run:
 ```
 npm run build
 ```
 That will output the full site, with purged and minified CSS and minified html. The output will be stored in the `/public` folder
 
-To run the build task automatically on file changes run:
+## Build it for dev
+To build your static website for local development run:
+```
+npm run build-dev
+```
+This will build the static website into the `/dev` without all the minifiying and purging stuff (<- much faster and a more human friendly code output, but a much bigger package)
+
+## Run in dev mode
+To run the build-dev task automatically on file changes run:
 ```
 npm run watch
 ```
-That will run 11straps in dev mode. Means it will build a non-minified version within the `/dev` folder, start a local server from this folder and connects browser sync to it.
+That will run a local server from `/dev` folder and connects browser sync to it. On changes within the `/src` folder it will run the `npm run build-dev` command automatically and will reload your browser
