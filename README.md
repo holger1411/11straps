@@ -30,7 +30,7 @@ To run the build-dev task automatically on file changes run:
 ```
 npm run watch
 ```
-That will run a local server from `/dev` folder and connects browser sync to it. On changes within the `/src` folder it will run the `npm run build-dev` command automatically and will reload your browser
+That will run a local server from `/dev` folder and connects browser sync to it. On changes within the `/src` folder it will run the `npm run build-dev` command automatically and will refresh your browser.
 
 ## Build it for prod
 If you are done with your dev work and happy with it its time to deploy your static website into the wild wild west (www). To build your static website for a prod deployment run:
