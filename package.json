@@ -4,6 +4,7 @@
   "description": "simple 11ty and Bootstrap5 boilerplate",
   "license": "MIT",
   "private": "true",
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
   "main": "index.html",
   "scripts": {
     "build": "npm run clean && npm run clean-prod  && npx eleventy && gulp sass && gulp minify-css && gulp dist-assets && gulp prod-copy && gulp inject-min-css && gulp purgecss && gulp minify-html",
