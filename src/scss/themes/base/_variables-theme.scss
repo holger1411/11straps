@@ -2,11 +2,12 @@ $font-family-sans-serif:      "Inter", system-ui, -apple-system, "Segoe UI", Rob
 
 $gray-900: #151515;
 $gray-300: #888;
-
+$blue: #1717e5;
+$gray-800: #282828;
 $body-bg:  $gray-900;
 $body-color: $gray-300;
-$font-size-base:              1.1rem !default; // Assumes the browser default, typically `16px`
+$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
 $lead-font-weight:200;
 $font-weight-light:           200 !default;
-$font-weight-normal:          300 !default;
+$font-weight-normal:          200 !default;
 $lead-font-size:              $font-size-base * 1.3;

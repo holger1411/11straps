@@ -2,13 +2,6 @@
 
 @import "assets/bootstrap"; // Bootstrap default styles
 
+@import "themes/base/style-theme"; //Thats your main variable file to set up all the basic design stuff like contrast or accent color, global paddings, font families and more
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap');
-
-
-.gradient-rounded {
-  border: double 3px transparent;
-  border-radius: 80px;
-  background-image: linear-gradient(white, white), radial-gradient(circle at top left, red,#909);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-}

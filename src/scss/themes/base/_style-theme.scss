@@ -1,0 +1,112 @@
+.gradient-rounded {
+  border: double 3px transparent;
+  border-radius: 80px;
+  background-image: linear-gradient(white, white), radial-gradient(circle at top left, red,#909);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.link-fancy {
+  color: $white;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.link-fancy:hover {
+  color: $white;
+  font-weight:300;
+}
+
+.link-fancy:before {
+  content: '';
+  display: block;
+  height: 1px;
+  width: 100%;
+  transform-origin: left;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-image: linear-gradient(90deg, #fff 0, #fff 25%, transparent 0, transparent 50%, #fff 0, #fff 75%, transparent 0, transparent);
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: 400% 1px;
+  transition: background-position 0.8s ease-in-out;
+}
+
+.link-fancy:hover:before {
+  background-position: 100%;
+
+}
+
+.my-vh-1 {
+  margin-top:1vh;
+  margin-bottom:1vh;
+}
+
+.my-vh-2 {
+  margin-top:2vh;
+  margin-bottom:2vh;
+}
+
+.my-vh-3 {
+  margin-top:3vh;
+  margin-bottom:3vh;
+}
+
+.my-vh-4 {
+  margin-top:5vh;
+  margin-bottom:5vh;
+}
+
+.my-vh-5 {
+  margin-top:8vh;
+  margin-bottom:8vh;
+}
+
+.my-vh-6 {
+  margin-top:14vh;
+  margin-bottom:14vh;
+}
+
+.py-vh-1 {
+  padding-top:1vh;
+  padding-bottom:1vh;
+}
+
+.py-vh-2 {
+  padding-top:2vh;
+  padding-bottom:2vh;
+}
+
+.py-vh-3 {
+  padding-top:3vh;
+  padding-bottom:3vh;
+}
+
+.py-vh-4 {
+  padding-top:5vh;
+  padding-bottom:5vh;
+}
+
+.py-vh-5 {
+  padding-top:8vh;
+  padding-bottom:8vh;
+}
+
+.py-vh-6 {
+  padding-top:14vh;
+  padding-bottom:14vh;
+}
+
+.bg-gray800 {
+  background-color:$gray-800;
+}
+
+.bg-gray900 {
+  background-color:$gray-900;
+}
+
+.bg-black {
+  background-color:$black;
+}
