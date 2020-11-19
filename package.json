@@ -23,7 +23,7 @@
     "clean-prod": "rm -rf public/*"
   },
   "dependencies": {
-    "@11ty/eleventy": "0.11.0",
+    "@11ty/eleventy": "0.11.1",
     "bootstrap": "5.0.0-alpha3",
     "clean-css": "^4.2.3",
     "gulp": "^4.0.2",
