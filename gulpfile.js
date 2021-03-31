@@ -112,7 +112,7 @@ gulp.task( 'copy-assets', function( done ) {
 	////////////////// All Bootstrap 4 Assets /////////////////////////
 	// Copy all JS files
 	var stream = gulp
-		.src( paths.node + '/bootstrap/dev/js/**/*.js' )
+		.src( paths.node + '/bootstrap/dist/js/**/*.*' )
 		.pipe( gulp.dest( paths.dev + '/js' ) );
 
 	// Copy all Bootstrap SCSS files
