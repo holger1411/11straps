@@ -1,0 +1,22 @@
+<!doctype html>
+<html class="h-100" lang="en">
+  <head>
+
+    {% include 'snippets/head.njk' %}
+
+  </head>
+  <body>
+
+    {% include 'snippets/navbar.njk' %}
+
+    {% include 'snippets/maincontent.njk' %}
+
+    <div class="container mb-5">
+    {% include 'snippets/postloop.njk' %}
+    </div>
+
+    {% include 'snippets/footer.njk' %}
+
+  </body>
+
+</html>

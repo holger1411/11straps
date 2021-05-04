@@ -1,3 +1,5 @@
 {
-  "title": "11straps - A Elevents and Bootstrap 5 static website geneerator boilerplate"
+  "title": "11straps - A Elevents and Bootstrap 5 static website geneerator boilerplate",
+  "author": "Holger Koenemann",
+  "description": "Combination of static site generator eleventy and CSS framework Bootstrap 5 into one solid boilerplate"
   }
