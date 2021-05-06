@@ -1,10 +1,10 @@
 <div class="row">
 {% for post in collections.posts %}
 <div class="col-12 col-lg-6 py-4">
-<h2><a href="{{ post.url }}" class="text-dark text-decoration-none">{{ post.data.pageTitle }}</a></h2>
-    <time class="fw-bold" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+<h2 class="display-2"><a href="{{ post.url }}" class="text-dark text-decoration-none">{{ post.data.pageTitle }}</a></h2>
+  <!--  <time class="fw-bold" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
     <p>{{ post.data.lead }}</p>
-    <a href="{{ post.url }}">Read more...</a>
+    <a href="{{ post.url }}">Read more...</a>-->
 </div>
 {% endfor %}
 </div>
