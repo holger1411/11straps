@@ -1,6 +1,5 @@
 ---
-layout: layouts/default.njk
-pageTitle: Lorem ipsum dolor
+title: Lorem ipsum dolor
 date: Created
 lead: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 ---

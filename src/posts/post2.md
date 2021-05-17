@@ -1,6 +1,5 @@
 ---
-layout: layouts/default.njk
-pageTitle: Sit amet elitr
+title: Sit amet elitr
 date: Created
 lead: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 ---

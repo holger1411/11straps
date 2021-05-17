@@ -13,6 +13,11 @@ module.exports = function(eleventyConfig) {
       zone: 'utc'
     }).toFormat("dd LLL yyyy");
   });
+  // limit filter
+  eleventyConfig.addFilter("limit", function(array, limit) {
+    return array.slice(0, limit)
+    .reverse();
+  });
   // https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
   eleventyConfig.addFilter('htmlDateString', (dateObj) => {
     return DateTime.fromJSDate(dateObj, {
@@ -25,4 +30,5 @@ module.exports = function(eleventyConfig) {
       output: "dev"
     }
   };
+
 };

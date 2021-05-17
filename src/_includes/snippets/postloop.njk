@@ -1,10 +1,10 @@
-<div class="row">
-{% for post in collections.posts %}
-<div class="col-12 col-lg-6 py-4">
-<h2 class="display-2"><a href="{{ post.url }}" class="text-dark text-decoration-none">{{ post.data.pageTitle }}</a></h2>
-  <!--  <time class="fw-bold" datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-    <p>{{ post.data.lead }}</p>
-    <a href="{{ post.url }}">Read more...</a>-->
-</div>
+<ul>
+{% for post in collections.posts | reverse %}
+    {% if loop.index0 < 5 %}
+  <li>
+    <a href="{{ post.url | url }}" class="link-fancy">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
+    <time  datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+  </li>
+  {% endif %}
 {% endfor %}
-</div>
+</ul>
