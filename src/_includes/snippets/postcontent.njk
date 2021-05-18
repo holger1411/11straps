@@ -1,0 +1,24 @@
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-lg-10 col-xl-8">
+    <article>
+      <header class="border-bottom pb-4 mb-4">
+        <h1 class="display-1">{{ title }}</h1>
+        {% block extraArticleHeader %}
+          {% set wc = content | striptags | wordcount %}
+          {% set wPerMinute = (wc / 240) + 1 %}
+          <aside class="fw-bold">
+            {{ wPerMinute | round }}
+            min read.
+          </aside>
+          <p>Published
+            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time>
+          </p>
+        {% endblock %}
+      </header>
+      <p class="lead">
+        {{ intro }}
+      </p>
+      {{ content | safe }}
+    </article>
+  </div>
+</div>

@@ -1,21 +1,25 @@
 <!doctype html>
-<html class="h-100" lang="en">
+<html class="h-100" lang="{{ metadata.language }}">
+
   <head>
-
     {% include 'snippets/head.njk' %}
-
   </head>
-<body class="bg-dark text-light">
+
+  <body class="bg-dark text-light">
 
     {% include 'snippets/navbar.njk' %}
 
-    {% include 'snippets/maincontent.njk' %}
+    <main class="container">
+      {% include 'snippets/maincontent.njk' %}
+    </main>
 
-    <div class="container">
+    <div class="container py-5">
       {% include 'snippets/postloop.njk' %}
     </div>
 
-    {% include 'snippets/footer.njk' %}
+    <footer class="container">
+      {% include 'snippets/footer.njk' %}
+    </footer>
 
   </body>
 

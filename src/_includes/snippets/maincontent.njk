@@ -1,4 +1,8 @@
-<main class="container py-5">
-        <h1>{{ pageTitle }}</h1>
-  {{ content | safe }}
-</main>
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-lg-10 col-xl-8">
+    <header>
+      <h1 class="display-1">{{ title }}</h1>
+    </header>
+    {{ content | safe }}
+  </div>
+</div>

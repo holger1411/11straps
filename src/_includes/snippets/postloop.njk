@@ -1,10 +1,14 @@
-<ul>
-{% for post in collections.posts | reverse %}
-    {% if loop.index0 < 5 %}
-  <li>
-    <a href="{{ post.url | url }}" class="link-fancy">{% if post.data.title %}{{ post.data.title }}{% else %}<code>{{ post.url }}</code>{% endif %}</a>
-    <time  datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-  </li>
-  {% endif %}
-{% endfor %}
-</ul>
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-lg-10 col-xl-8">
+    {% for post in collections.posts | reverse %}
+      {% if loop.index0 < 999 %}
+        <div class=" border-top py-5">
+          <h2 class="display-1">{{ post.data.title}}</h2>
+          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+          <p>{{ post.data.intro }}</p>
+          <a href="{{ post.url | url }}" class="link-fancy">Read more...</a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
