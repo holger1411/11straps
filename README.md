@@ -1,6 +1,8 @@
 # 11straps = 11ty + Bootstrap5
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/64b42b0c-aeba-4583-b023-202fcdf571bb/deploy-status)](https://app.netlify.com/sites/11straps-demo/deploys)
-**Demo**: <a href="https://11straps.com" target="_blank">11straps.com</a>
+
+**Live Demo**: <a href="https://11straps.com" target="_blank">11straps.com</a>
 
 ## What is 11straps?
 11straps is a simple boilerplate. It combines the static site generator <a href="https://www.11ty.dev/" target="_blank">11ty</a> with the CSS framework <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> and is stitched together with some npm and Gulp magic dust. It minifies and purges the CSS file (so it removes any unused CSS) and comes with a static server and browser sync support for your local development.
