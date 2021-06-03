@@ -5,16 +5,10 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
-a {color:$white;}
 .link-fancy {
-  color: $white;
   text-decoration: none;
   display: inline-block;
   position: relative;
-}
-
-.link-fancy:hover {
-  color: $white;
 }
 
 .link-fancy:before {
@@ -26,7 +20,7 @@ a {color:$white;}
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: linear-gradient(90deg, #fff 0, #fff 25%, transparent 0, transparent 50%, #fff 0, #fff 75%, transparent 0, transparent);
+  background-image: linear-gradient(90deg, $primary 0, $primary 25%, transparent 0, transparent 50%, $primary 0, $primary 75%, transparent 0, transparent);
   background-repeat: no-repeat;
   background-position: 0;
   background-size: 400% 1px;
