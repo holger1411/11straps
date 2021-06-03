@@ -101,7 +101,7 @@ gulp.task('sass', function () {
 gulp.task('inject-min-css', function(done) {
   gulp.src('./public/**/*.html')
     .pipe(htmlreplace({
-        'css': 'css/theme.min.css'
+        'css': '/css/theme.min.css'
     }))
     .pipe(gulp.dest('./public'));
          done();
