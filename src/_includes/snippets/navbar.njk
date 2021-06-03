@@ -9,16 +9,15 @@
         <li class="nav-item me-1">
           <a class="nav-link" aria-current="page" href="{{ '/' | url }}">Home</a>
         </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Demo Content
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item text-white" href="{{ '/default' | url }}">Sample Page</a></li>
-            <li><a class="dropdown-item text-white" href="{{ '/blog' | url }}">Blog</a></li>
-            <li><a class="dropdown-item text-white" href="{{ '/posts/post1' | url }}">Post</a></li>
-          </ul>
+
+        <li class="nav-item me-1">
+          <a class="nav-link" href="{{ '/default' | url }}">Sample Page</a>
         </li>
+
+        <li class="nav-item me-1">
+        <a class="nav-link" href="{{ '/blog' | url }}">Sample Blog</a>
+        </li>
+
       </ul>
     </div>
   </div>
