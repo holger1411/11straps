@@ -1,5 +1,5 @@
 # 11straps = 11ty + Bootstrap5
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/64b42b0c-aeba-4583-b023-202fcdf571bb/deploy-status)](https://app.netlify.com/sites/11straps-demo/deploys)
 **Demo**: <a href="https://11straps.com" target="_blank">11straps.com</a>
 
 ## What is 11straps?
@@ -38,4 +38,4 @@ If you are done with your dev work and happy with it its time to deploy your sta
 ```
 npm run build
 ```
-That will output the full site, with purged and minified CSS and minified html. The output will be stored in the `/public` folder. 
+That will output the full site, with purged and minified CSS and minified html. The output will be stored in the `/public` folder.
