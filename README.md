@@ -14,7 +14,7 @@ node --version
 ```
 
 ## Want to try it out now?
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=hhttps://github.com/holger1411/11straps)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/holger1411/11straps)
 
 ## Installation
 Download and extract the [latest release](https://github.com/holger1411/11straps/releases) or checkout the main branch of this repo.
