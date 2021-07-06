@@ -1,14 +1,19 @@
 <div class="row d-flex justify-content-center">
   <div class="col-12 col-lg-10 col-xl-8">
-    {% for post in collections.posts | reverse %}
-      {% if loop.index0 < 999 %}
+    {%- for post in posts %}
         <div class=" border-top py-5">
-          <h2 class="display-1">{{ post.data.title}}</h2>
+          <h2>{{ post.data.title}}</h2>
           <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
           <p>{{ post.data.intro }}</p>
           <a href="{{ post.url | url }}" class="link-fancy">Read more...</a>
         </div>
-      {% endif %}
     {% endfor %}
+
+    {% if pagination.href.previous %}
+  <a href="{{pagination.href.previous}}">Previous Page</a>
+{% endif %}
+{% if pagination.href.next %}
+  <a href="{{pagination.href.next}}">Next Page</a>
+{% endif %}
   </div>
 </div>
