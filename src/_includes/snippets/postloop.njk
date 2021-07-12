@@ -8,12 +8,23 @@
           <a href="{{ post.url | url }}" class="link-fancy">Read more...</a>
         </div>
     {% endfor %}
+  </div>
+</div>
 
-    {% if pagination.href.previous %}
-  <a href="{{pagination.href.previous}}">Previous Page</a>
-{% endif %}
-{% if pagination.href.next %}
-  <a href="{{pagination.href.next}}">Next Page</a>
-{% endif %}
+
+<div class="row d-flex justify-content-center">
+  <div class="col-12 col-lg-10 col-xl-8">
+    <div class="row d-flex justify-content-between">
+  <div class="col">
+      {% if pagination.href.previous %}
+      <a href="{{pagination.href.previous}}"><< Previous Page</a>
+      {% endif %}
+    </div>
+    <div class="col text-end">
+      {% if pagination.href.next %}
+      <a href="{{pagination.href.next}}">Next Page >></a>
+      {% endif %}
+    </div>
+  </div>
   </div>
 </div>
