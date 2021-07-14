@@ -1,30 +1,28 @@
 <div class="row d-flex justify-content-center">
-  <div class="col-12 col-lg-10 col-xl-8">
+  <div class="col-12">
     {%- for post in posts %}
-        <div class=" border-top py-5">
-          <h2>{{ post.data.title}}</h2>
-          <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
-          <p>{{ post.data.intro }}</p>
-          <a href="{{ post.url | url }}" class="link-fancy">Read more...</a>
-        </div>
+      <div class=" border-top py-5">
+        <h2>{{ post.data.title}}</h2>
+        <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+        {% for tag in post.data.tags | filterTagList %}
+          {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
+          <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {% endfor %}
+        <p>{{ post.data.summary }}</p>
+        <a href="{{ post.url | url }}" class="link-fancy">Read more...</a>
+      </div>
     {% endfor %}
   </div>
 </div>
 
-
 <div class="row d-flex justify-content-center">
-  <div class="col-12 col-lg-10 col-xl-8">
+  <div class="col-12">
     <div class="row d-flex justify-content-between">
-  <div class="col">
-      {% if pagination.href.previous %}
-      <a href="{{pagination.href.previous}}"><< Previous Page</a>
-      {% endif %}
+      <div class="col">
+        {% if pagination.href.previous %}
+          <a href="{{pagination.href.previous}}"><< Previous Page</a> {% endif %} </div> <div class="col text-end"> {% if pagination.href.next %} <a href="{{pagination.href.next}}">Next Page >></a>
+        {% endif %}
+      </div>
     </div>
-    <div class="col text-end">
-      {% if pagination.href.next %}
-      <a href="{{pagination.href.next}}">Next Page >></a>
-      {% endif %}
-    </div>
-  </div>
   </div>
 </div>
