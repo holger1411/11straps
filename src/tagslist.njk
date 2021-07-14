@@ -1,8 +1,8 @@
 ---
 permalink: /tags/
 layout: layouts/default.njk
+title: Tags List
 ---
-<h1>Tags</h1>
 
 {% for tag in collections.tagList %}
   {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}

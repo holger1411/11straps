@@ -9,12 +9,20 @@
 
     {% include 'snippets/navbar.njk' %}
 
-    <main class="container py-5">
-      {% include 'snippets/maincontent.njk' %}
+    <main class="container py-vh-4 pb-0">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+          {% include 'snippets/maincontent.njk' %}
+        </div>
+      </div>
     </main>
 
-    <div class="container">
-      {% include 'snippets/postloop.njk' %}
+    <div class="container py-vh-4">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+          {% include 'snippets/postloop.njk' %}
+        </div>
+      </div>
     </div>
 
     <footer class="container">

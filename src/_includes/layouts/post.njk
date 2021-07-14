@@ -5,12 +5,16 @@
     {% include 'snippets/head.njk' %}
   </head>
 
-<body>
+  <body>
 
     {% include 'snippets/navbar.njk' %}
 
-    <main class="container">
-        {% include 'snippets/postcontent.njk' %}
+    <main class="container py-vh-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12 col-lg-10 col-xl-8">
+          {% include 'snippets/postcontent.njk' %}
+        </div>
+      </div>
     </main>
 
     <footer class="container">
