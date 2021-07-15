@@ -4,7 +4,4 @@ layout: layouts/default.njk
 title: Tags List
 ---
 
-{% for tag in collections.tagList %}
-  {% set tagUrl %}/tags/{{ tag | slug }}/{% endset %}
-  <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-{% endfor %}
+    {% include 'snippets/tagslist.njk' %}

@@ -10,10 +10,15 @@
     {% include 'snippets/navbar.njk' %}
 
     <main class="container py-vh-5">
-      <div class="row d-flex justify-content-center">
-        <div class="col-12 col-lg-10 col-xl-8">
+      <div class="row d-flex justify-content-between">
+        <div class="col-12 col-md-7">
           {% include 'snippets/postcontent.njk' %}
         </div>
+
+        <div class="col-12 col-md-4">
+          {% include 'snippets/blogsidebar.njk' %}
+        </div>
+
       </div>
     </main>
 

@@ -6,21 +6,26 @@
   </head>
 
   <body>
-
+    
     {% include 'snippets/navbar.njk' %}
 
-    <main class="container py-vh-4 pb-0">
+    <main class="container">
       <div class="row d-flex justify-content-center">
-        <div class="col-12 col-lg-10 col-xl-8">
+        <div class="col-12">
+          <div class="bg-light py-vh-5 px-5 my-5 rounded">
           {% include 'snippets/maincontent.njk' %}
         </div>
       </div>
+      </div>
     </main>
 
-    <div class="container py-vh-4">
-      <div class="row d-flex justify-content-center">
-        <div class="col-12 col-lg-10 col-xl-8">
+    <div class="container py-vh-4 pt-0">
+      <div class="row d-flex justify-content-between">
+        <div class="col-12 col-md-7">
           {% include 'snippets/postloop.njk' %}
+        </div>
+        <div class="col-12 col-md-4">
+          {% include 'snippets/blogsidebar.njk' %}
         </div>
       </div>
     </div>
