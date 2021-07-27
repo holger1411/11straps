@@ -1,0 +1,39 @@
+<!doctype html>
+<html class="h-100" lang="{{ metadata.language }}">
+
+  <head>
+    {% include 'snippets/head.njk' %}
+  </head>
+
+  <body>
+
+    {% include 'snippets/navbar.njk' %}
+
+    <main class="container py-vh-5">
+      <div class="row d-flex justify-content-center">
+        <div class="col-12">
+          <header class="py-4">
+            <h1 class="display-1">{{ title }}</h1>
+
+            <hr/>
+            <p class="lead">
+              {{ description }}
+            </header>
+          </p>
+          <div class="rounded-top border p-4">
+            {{ content | safe }}
+</div>
+          <div class="bg-light rounded border border-top-0 p-4">
+                <code><xmp class="w-auto font-monospace" style="overflow-x:scroll;">{{ content | safe}}</xmp></code>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="container">
+      {% include 'snippets/footer.njk' %}
+    </footer>
+
+  </body>
+
+</html>
