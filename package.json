@@ -35,7 +35,7 @@
     "gulp-plumber": "^1.2.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "4.1.1",
-    "npm-watch": "^0.10.0",
+    "npm-watch": "^0.11.0",
     "sass": "^1.36.0",
     "watch": "^1.0.2"
   },
