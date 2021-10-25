@@ -59,8 +59,20 @@ gulp.task('purgecss', () => {
         .pipe(gulp.dest('public/css'))
 })
 
-gulp.task('clean-dist', function() {
-  return gulp.src('dist', {
+gulp.task('clean-public', function() {
+  return gulp.src('public', {
+      read: false
+    })
+    .on('error', function(err) {
+      console.log(err.toString());
+
+      this.emit('end');
+    })
+    .pipe(clean());
+});
+
+gulp.task('clean-dev', function() {
+  return gulp.src('dev', {
       read: false
     })
     .on('error', function(err) {

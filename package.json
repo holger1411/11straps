@@ -1,6 +1,6 @@
 {
   "name": "11strap",
-  "version": "0.7.0",
+  "version": "0.9.0",
   "description": "simple 11ty and Bootstrap5 boilerplate",
   "license": "MIT",
   "private": "true",
@@ -19,8 +19,8 @@
     "watch:all": "onchange 'src/' -- npm run build-dev",
     "serve": "eleventy --serve",
     "watch": "npm run clean && npm run build-dev && run-p sync watch:all",
-    "clean": "rm -rf dev/*",
-    "clean-prod": "rm -rf public/*"
+    "clean": "gulp clean-dev",
+    "clean-prod": "gulp clean-public"
   },
   "dependencies": {
     "@11ty/eleventy": "1.0.0-canary.44",
