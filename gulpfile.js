@@ -61,7 +61,8 @@ gulp.task('purgecss', () => {
 
 gulp.task('clean-public', function() {
   return gulp.src('public', {
-      read: false
+      read: false,
+      allowEmpty: true
     })
     .on('error', function(err) {
       console.log(err.toString());
@@ -73,7 +74,8 @@ gulp.task('clean-public', function() {
 
 gulp.task('clean-dev', function() {
   return gulp.src('dev', {
-      read: false
+      read: false,
+      allowEmpty: true
     })
     .on('error', function(err) {
       console.log(err.toString());
