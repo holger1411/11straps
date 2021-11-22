@@ -14,8 +14,6 @@ var reload      = browserSync.reload;
 var cfg = require( './gulpconfig.json' );
 var paths = cfg.paths;
 
-sass.compiler = require('node-sass');
-
 gulp.task('dist-assets', function (done) {
     gulp.src('./src/js/**.*')
         .pipe(gulp.dest('./dev/js'));

@@ -1,6 +1,6 @@
 {
   "name": "11strap",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "description": "simple 11ty and Bootstrap5 boilerplate",
   "license": "MIT",
   "private": "true",
@@ -23,7 +23,7 @@
     "clean-prod": "gulp clean-public"
   },
   "dependencies": {
-    "@11ty/eleventy": "1.0.0-canary.44",
+    "@11ty/eleventy": "1.0.0-beta.8",
     "bootstrap": "5.1.3",
     "bootstrap-icons": "1.6.1",
     "clean-css": "^5.2.2",
@@ -51,11 +51,11 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/holger1411/11straps"
   },
   "keywords": [],
   "bugs": {
     "url": ""
   },
-  "homepage": ""
+  "homepage": "https://11straps.com/"
 }
