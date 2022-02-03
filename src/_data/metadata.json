@@ -1,6 +1,6 @@
 {
-  "title": "11straps - Demo Website",
+  "title": "Raul Game",
   "author": "Holger Koenemann",
-  "description": "Combination of static site generator eleventy and CSS framework Bootstrap 5 into one solid boilerplate",
+  "description": "An ancient game of collaboration, determination and spirit.",
   "language": "en"
-  }
+}
