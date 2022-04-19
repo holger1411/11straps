@@ -1,6 +1,6 @@
 {
   "name": "11strap",
-  "version": "0.2",
+  "version": 0.2,
   "description": "simple 11ty and Bootstrap5 boilerplate",
   "license": "MIT",
   "private": "true",
