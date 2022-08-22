@@ -41,7 +41,7 @@
   },
   "author": "Holger Koenemann",
   "devDependencies": {
-    "@11ty/eleventy-navigation": "^0.3.3",
+    "@11ty/eleventy-navigation": "^0.3.5",
     "@11ty/eleventy-plugin-rss": "^1.1.2",
     "gulp-html-replace": "^1.6.2",
     "gulp-purgecss": "^4.1.3",
