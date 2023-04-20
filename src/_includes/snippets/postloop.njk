@@ -2,7 +2,7 @@
   <div class="col-12">
     {%- for post in posts %}
       <div class="py-5 border-bottom">
-        <a href="{{ post.url | url }}" class="text-decoration-none text-dark"><h2 class="display-4">{{ post.data.title}}</h2></a>
+        <a href="{{ post.url | url }}"><h2 class="display-4">{{ post.data.title}}</h2></a>
         <p>Published
           <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
         </p>
