@@ -3,8 +3,6 @@ const navigationPlugin = require('@11ty/eleventy-navigation')
 const rssPlugin = require('@11ty/eleventy-plugin-rss')
 
 module.exports = function(eleventyConfig) {
-
-
   function filterTagList(tags) {
     return (tags || []).filter(tag => ["all", "nav"].indexOf(tag) === -1);
   }
@@ -64,5 +62,4 @@ module.exports = function(eleventyConfig) {
       output: "dev"
     }
   };
-
 };

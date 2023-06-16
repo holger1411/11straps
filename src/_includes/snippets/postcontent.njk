@@ -1,6 +1,7 @@
 <article>
       <header class="border-bottom pb-4 mb-4">
-        <h1 class="display-1">{{ title }}</h1>
+
+        <h1 class="display-1">{{ title }} </h1>
         {% block extraArticleHeader %}
           {% set wc = content | striptags | wordcount %}
           {% set wPerMinute = (wc / 240) + 1 %}
